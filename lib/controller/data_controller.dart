@@ -61,7 +61,22 @@ class DataController extends GetxController {
         curve: Curves.bounceInOut); // Animation curve
     isListDown.value = false; // Update list scrolling direction
   }
+  //hide the floating navigation button while scrolling down, but should appear on scrolling up
+  void onScrollingDown(double previousOffset, double currentOffset) {
+    if (currentOffset > previousOffset) {
+      // Scrolling down
+      // Hide floating navigation button
+      isListDown.value = true;
+    }
+  }
 
+  void onScrollingUp(double previousOffset, double currentOffset) {
+    if (currentOffset < previousOffset) {
+      // Scrolling up
+      // Show floating navigation button
+      isListDown.value = false;
+    }
+  }
   @override
   void onInit() {
     fetchData(); // Fetch data when controller initializes

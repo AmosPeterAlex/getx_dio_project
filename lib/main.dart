@@ -1,4 +1,3 @@
-// import 'package:advanced_flutter/api/using%20dio/view/dio_home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_dio_study/view/dio_home.dart';

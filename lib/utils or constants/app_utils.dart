@@ -4,5 +4,5 @@ import "package:top_snackbar_flutter/top_snack_bar.dart";
 
 showCustomSnackBar(context) => showTopSnackBar(
       Overlay.of(context),
-      CustomSnackBar.error(message: "Something went wrong"),
+      const CustomSnackBar.error(message: "Something went wrong"),
     );
